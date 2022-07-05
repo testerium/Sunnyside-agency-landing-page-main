@@ -1,0 +1,19 @@
+@use './variables.scss' as *;
+@use './boxes.scss' as *;
+@use './footer.scss' as *;
+@use './header.scss' as *;
+@use './testimonials.scss' as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:opsz,wght@9..144,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 auto;
+    max-width: 1440px;
+    width: 100%;
+}

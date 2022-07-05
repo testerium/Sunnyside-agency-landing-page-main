@@ -1,0 +1,146 @@
+@use './variables.scss' as *;
+
+section {
+    h3 {
+        font-family: $font-fraunces;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 20px;
+        line-height: 25px;
+        text-align: center;
+        letter-spacing: 5px;
+        color: #A7AAAD;
+        margin: 160px auto 81px auto;
+        text-transform: uppercase;
+    }
+
+    .testimonials_container {
+        display: grid;
+        grid-template-columns: repeat(3, 350px);
+        grid-template-rows: 1fr;
+        grid-column-gap: 30px;
+        grid-row-gap: 0px;
+        justify-content: center;
+
+        .opinion {
+
+            img {
+                width: 72px;
+                height: 72px;
+                border-radius: 50%;
+                display: flex;
+                margin: 0 auto;
+            }
+
+            blockquote {
+                font-family: $font-barlow;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 18px;
+                line-height: 32px;
+                text-align: center;
+                letter-spacing: -0.128571px;
+                color: #5B636D;
+                margin: 58px auto 69px auto;
+            }
+
+            cite {
+                display: block;
+                font-family: $font-fraunces;
+                font-style: normal;
+                font-weight: 900;
+                font-size: 18px;
+                line-height: 22px;
+                text-align: center;
+                letter-spacing: -0.128571px;
+                color: #24303E;
+            }
+
+            p {
+                font-family: $font-barlow;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 25px;
+                text-align: center;
+                letter-spacing: -0.1px;
+                color: #A7AAAD;
+                margin: 9px auto 160px auto;
+            }
+        }
+    }
+
+}
+
+.images_container {
+    display: flex;
+    flex-direction: row;
+
+    img {
+        width: 25%;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .images_container {
+        display: flex;
+        flex-wrap: wrap;
+
+        img {
+            width: 50%
+        }
+    }
+
+    section {
+        .testimonials_container {
+            display: flex;
+
+            .opinion blockquote {
+                font-size: 15px;
+                margin: 58px 5px 69px 5px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .images_container {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 22px;
+
+        img {
+            width: 50%;
+        }
+    }
+
+    section {
+
+        h3 {
+            margin: 64px 48px;
+            font-size: 16px;
+            line-height: 20px;
+            letter-spacing: 4px;
+        }
+
+        .testimonials_container {
+            display: flex;
+            flex-direction: column;
+
+            .opinion {
+
+                & blockquote {
+                    margin: 32px 24px;
+                    font-size: 18px;
+                    line-height: 32px;
+                    text-align: center;
+                    letter-spacing: -0.128571px;
+                }
+
+                & p {
+                    margin: 9px auto 64px auto;
+                }
+            }
+        }
+    }
+}

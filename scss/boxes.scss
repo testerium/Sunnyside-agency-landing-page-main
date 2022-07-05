@@ -1,0 +1,315 @@
+@use './variables.scss' as *;
+
+.boxes_container {
+    display: flex;
+    flex-wrap: wrap;
+
+    .box {
+        width: 50%;
+        max-width: 720px;
+        display: flex;
+        flex-direction: column;
+
+        h2 {
+            font-family: $font-fraunces;
+            font-style: normal;
+            font-weight: 900;
+            font-size: 40px;
+            line-height: 49px;
+            letter-spacing: -0.285714px;
+            color: #24303E;
+            padding: 158px 110px 32px 165px;
+        }
+
+        p {
+            font-family: $font-barlow;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 30px;
+            letter-spacing: -0.128571px;
+            color: #808397;
+            padding: 0 110px 40px 165px;
+        }
+
+        span {
+            font-family: $font-fraunces;
+            font-style: normal;
+            font-weight: 900;
+            font-size: 15px;
+            line-height: 25px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: #24303E;
+            padding: 0 110px 157px 165px;
+            text-decoration-line: underline;
+            text-decoration-thickness: 9px;
+            text-decoration-color: rgb(250, 212, 0, 0.25);
+            mix-blend-mode: normal;
+        }
+    }
+
+    .box1 span:hover {
+        cursor: pointer;
+        text-decoration-color: rgb(250, 212, 0);
+    }
+
+    .box4 span:hover {
+        cursor: pointer;
+        text-decoration-color: #FE7766;
+    }
+
+
+    .box_img {
+        width: 50%;
+        max-width: 720px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .box5 {
+        position: relative;
+
+        .box5_text {
+            position: absolute;
+            text-align: center;
+        }
+
+        h2 {
+            font-family: $font-fraunces;
+            font-style: normal;
+            font-weight: 900;
+            font-size: 40px;
+            line-height: 49px;
+            letter-spacing: -0.285714px;
+            color: #24554A;
+            margin: 398px 210px 27px 210px;
+        }
+
+        p {
+            font-family: $font-barlow;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 30px;
+            letter-spacing: -0.128571px;
+            color: #3E7467;
+            margin: 0 170px;
+        }
+    }
+
+    .box6 {
+        position: relative;
+
+        .box6_text {
+            position: absolute;
+            text-align: center;
+        }
+
+        h2 {
+            font-family: $font-fraunces;
+            font-style: normal;
+            font-weight: 900;
+            font-size: 40px;
+            line-height: 49px;
+            letter-spacing: -0.285714px;
+            color: #052C3B;
+            margin: 398px 210px 27px 210px;
+        }
+
+        p {
+            font-family: $font-barlow;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 30px;
+            letter-spacing: -0.128571px;
+            color: #19536C;
+            margin: 0 170px;
+        }
+    }
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    body {
+        margin: 0 auto;
+        max-width: 1024px;
+        width: 100%;
+    }
+
+    .boxes_container {
+        display: flex;
+        flex-wrap: wrap;
+
+        .box {
+            h2 {
+                padding: 50px 10px 0 10px;
+                font-size: 30px;
+            }
+
+            p {
+                padding: 10px;
+                font-size: 17px;
+                line-height: 20px;
+            }
+
+            span {
+                padding: 10px;
+                font-size: 15px;
+            }
+        }
+
+        .box5 {
+            max-width: 1024px;
+            width: 100%;
+
+            .box5_text {
+
+                h2 {
+                    margin: 500px 10px 0 10px;
+                    font-size: 30px;
+                }
+
+                p {
+                    margin: 0px 185px;
+                    font-size: 17px;
+                    line-height: 20px;
+                }
+            }
+        }
+
+        .box6 {
+            max-width: 1024px;
+            width: 100%;
+
+            .box6_text {
+
+                h2 {
+                    margin: 520px 10px 0 10px;
+                    font-size: 30px;
+                }
+
+                p {
+                    margin: 0px 185px;
+                    font-size: 17px;
+                    line-height: 20px;
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 767px) {
+    body {
+        margin: 0 auto;
+        max-width: 767px;
+        width: 100%;
+    }
+
+    .boxes_container {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        flex-wrap: nowrap;
+
+        .box {
+            width: 100%;
+            max-width: 767px;
+
+            h2 {
+                padding: 64px 30px 0 30px;
+                font-size: 32px;
+                text-align: center;
+            }
+
+            p {
+                padding: 24px;
+                font-size: 18px;
+                line-height: 30px;
+                text-align: center;
+                letter-spacing: -0.128571px;
+                color: #808397;
+            }
+
+            span {
+                padding: 32px 119px 64px 119px;
+                font-size: 15px;
+                text-align: center;
+            }
+        }
+
+        .box1 {
+            order: 2
+        }
+
+        .box2 {
+            order: 1;
+        }
+
+        .box3 {
+            order: 3;
+        }
+
+        .box4 {
+            order: 4;
+        }
+
+        .box_img {
+            width: 100%;
+            max-width: 767px;
+
+            img {
+                display: none;
+            }
+        }
+
+        .box5 {
+            order: 5;
+            background: url('../images/mobile/image-graphic-design.jpg') no-repeat;
+            background-size: cover;
+            max-width: 767px;
+            width: 100%;
+            height: 600px;
+
+            .box5_text {
+
+                h2 {
+                    margin: 398px 70px 0 70px;
+                    font-size: 28px;
+                }
+
+                p {
+                    margin: 27px 24px auto 24px;
+                    font-size: 16px;
+                    line-height: 27px;
+                    color: #24554A;
+                }
+            }
+        }
+
+        .box6 {
+            order: 6;
+            background: url('../images/mobile/image-photography.jpg') no-repeat;
+            background-size: cover;
+            max-width: 767px;
+            width: 100%;
+            height: 600px;
+
+            .box6_text {
+
+                h2 {
+                    margin: 398px 70px 0 70px;
+                    font-size: 30px;
+                }
+
+                p {
+                    margin: 27px 24px auto 24px;
+                    font-size: 16px;
+                    line-height: 27px;
+                }
+            }
+        }
+    }
+}

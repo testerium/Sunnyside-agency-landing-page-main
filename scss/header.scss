@@ -1,0 +1,180 @@
+@use './variables.scss' as *;
+
+header {
+    height: 800px;
+    background-image: url('../images/desktop/image-header.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: #3ebfff;
+    width: 100%;
+    background-position: center;
+
+    .header_container {
+        display: flex;
+        flex-direction: column;
+
+        h1 {
+            font-family: $font-fraunces;
+            font-style: normal;
+            font-weight: 900;
+            font-size: 56px;
+            line-height: 69px;
+            text-align: center;
+            letter-spacing: 8.75px;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            margin: 105px 0 97px 0;
+        }
+
+        img {
+            width: fit-content;
+            margin: 0 auto;
+        }
+    }
+
+    .topnav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 34px 0 0 40px;
+
+        #hamburger_menu {
+            display: none;
+        }
+
+        #sidebar_menu {
+            visibility: visible;
+        }
+
+        #nav_menu {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            list-style: none;
+
+            #contact_button {
+                text-align: center;
+                background: #FFFFFF;
+                border-radius: 28px;
+                padding: 16px 30px;
+                color: black;
+                border: none;
+                text-transform: uppercase;
+
+
+                &:hover {
+                    cursor: pointer;
+                    background-color: rgba($color: #FFFFFF, $alpha: 0.25);
+                    color: #FFFFFF;
+                    border-radius: 28px;
+                }
+            }
+
+            img {
+                padding: 12px 0;
+            }
+
+            li a {
+                margin-right: 47px;
+                font-family: $font-barlow;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 18px;
+                line-height: 25px;
+                letter-spacing: -0.128571px;
+                color: #FFFFFF;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    header {
+        height: 538px;
+        background-image: url('../images/mobile/image-header.jpg');
+
+        .header_container {
+            display: flex;
+            flex-direction: column;
+
+            h1 {
+                font-size: 40px;
+                line-height: 49px;
+                letter-spacing: 6.25px;
+                margin: 88px 0 52px 0;
+            }
+
+            img {
+                width: fit-content;
+                margin: 0 auto;
+            }
+        }
+
+        .topnav {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 32px 0 0 0;
+
+            #hamburger_menu {
+                display: block;
+
+                &.active {
+                    opacity: 0.5;
+                }
+            }
+
+            #nav_menu {
+                width: 329px;
+                height: 329px;
+                position: fixed;
+                left: 100%;
+                top: 82px;
+                gap: 0;
+                flex-direction: column;
+                background-color: #FFFCF8;
+                text-align: center;
+                transition: 0.3s;
+                justify-content: space-evenly;
+
+                &.active {
+                    left: 0%;
+                    right: 0%;
+                    margin: 0 auto;
+                }
+
+                #contact_button {
+                    background: #FBD600;
+                    border-radius: 28px;
+
+                    &:hover {
+                        cursor: pointer;
+                        background: #FFFFFF;
+                        mix-blend-mode: normal;
+                        opacity: 0.25;
+                        border-radius: 28px;
+                    }
+                }
+
+                img {
+                    padding: 12px 0;
+                }
+
+                li a {
+                    font-family: 'Barlow';
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 20px;
+                    line-height: 25px;
+                    letter-spacing: -0.142857px;
+                    color: #808397;
+                    margin-right: auto;
+                }
+
+            }
+        }
+
+    }
+}
