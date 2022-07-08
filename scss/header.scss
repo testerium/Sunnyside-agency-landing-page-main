@@ -13,6 +13,17 @@ header {
         display: flex;
         flex-direction: column;
 
+        .arrow {
+            position: relative;
+            top: 50px;
+            /* -webkit-animation-name: move-arrow; */
+            animation-name: move-arrow;
+            /* -webkit-animation-duration: 3s; */
+            animation-duration: 3s;
+            /* -webkit-animation-iteration-count: infinite; */
+            animation-iteration-count: infinite;
+        }
+
         h1 {
             font-family: $font-fraunces;
             font-style: normal;
